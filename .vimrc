@@ -17,6 +17,9 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Comments
+Plugin 'scrooloose/nerdcommenter'
+
 " html
 Plugin 'alvan/vim-closetag'
 
@@ -141,27 +144,22 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 
-" filenames like *.xml, *.html, *.xhtml, ...
-" These are the file extensions where this plugin is enabled.
+" file extensions where this plugin is enabled.
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.twig'
 
-" filenames like *.xml, *.xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
+" non-closing tags self-closing in the specified files.
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 
-" filetypes like xml, html, xhtml, ...
-" These are the file types where this plugin is enabled.
+" file types where this plugin is enabled.
 let g:closetag_filetypes = 'html,xhtml,phtml,twig'
 
-" filetypes like xml, xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
+" non-closing tags self-closing in the specified filetypes.
 let g:closetag_xhtml_filetypes = 'xhtml,jsx'
 
-" integer value [0|1]
-" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+" non-closing tags case-sensitive (e.g. `<Link>` closed while `<link>` won't.)
 let g:closetag_emptyTags_caseSensitive = 1
 
-" Shortcut for closing tags, default is '>'
+" Shortcut for closing tags
 let g:closetag_shortcut = '>'
 
 " Add > at current position without closing the current tag, default is ''
@@ -178,4 +176,31 @@ let g:NERDTreeWinSize=20
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
+
+
+" nerdcommenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
 

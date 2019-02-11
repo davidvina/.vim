@@ -20,9 +20,17 @@ Plugin 'vim-airline/vim-airline-themes'
 " Comments
 Plugin 'scrooloose/nerdcommenter'
 
+" surround elements
+Plugin 'tpope/vim-surround'
+
 " html
 Plugin 'alvan/vim-closetag'
+Plugin 'mattn/emmet-vim'
+Plugin 'valloric/matchtagalways' "highlight html tags
+Plugin 'prettier/vim-prettier' "needs prettier: npm install prettier -g
 
+" sass
+Plugin 'shmargum/vim-sass-colors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -207,5 +215,12 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
+
+" matchTag highlight
+
+let g:mta_set_default_matchtag_color = 0
+let g:mta_use_matchparen_group = 0
+highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
+
 
 

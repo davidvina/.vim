@@ -68,16 +68,11 @@ syntax on
 
 set mouse=a
 
-" Fonts
-" if is macvim 
-if has("gui_macvim")
-  set macligatures
-endif
 
-" if is not vimr
-if !has("gui_vimr")
-  set guifont=Fura\ Code\ Regular\ Nerd\ Font\ Complete:h12
-endif
+" Fonts
+" set macligatures
+" set guifont=Fira\ Code\ Regular:h12
+set guifont=Fura\ Code\ Regular\ Nerd\ Font\ Complete:h12
 
 set linespace=2
 

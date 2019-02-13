@@ -31,6 +31,8 @@ Plugin 'prettier/vim-prettier' "needs prettier: npm install prettier -g
 
 " sass
 Plugin 'shmargum/vim-sass-colors'
+Plugin 'cakebaker/scss-syntax.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -222,5 +224,8 @@ let g:mta_set_default_matchtag_color = 0
 let g:mta_use_matchparen_group = 0
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
 
-
+" emmet
+let g:user_emmet_mode='a'
+autocmd FileType html,css,scss,sass EmmetInstall
+let g:user_emmet_expandabbr_key='<Tab>'
 
